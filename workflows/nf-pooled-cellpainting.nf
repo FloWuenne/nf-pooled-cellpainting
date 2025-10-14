@@ -65,18 +65,19 @@ workflow POOLED_CELLPAINTING {
     }
 
     // Process cell painting (CP) data
-    CELLPAINTING (
-        ch_samplesheet_cp,
-        cppipes,
-        params.range_skip
-    )
+    // CELLPAINTING (
+    //     ch_samplesheet_cp,
+    //     cppipes,
+    //     params.range_skip
+    // )
 
     // Process barcoding (sequencing by synthesis (SBS)) data
 
     // Run barcoding subworkflow
     BARCODING(
         ch_samplesheet_sbs,
-        cppipes
+        cppipes,
+        barcodes
     )
 
 
